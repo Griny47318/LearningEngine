@@ -2,10 +2,12 @@ cmake_minimum_required(VERSION 3.5)
 
 project(LuzerLibrary VERSION 0.0.2)
 
+add_definitions(-DLE_BUILD_DLL)
+
 add_library(libDll SHARED LE.h 
-Application.h Application.cpp 
-Log.h Log.cpp 
-config.h Core.h EntryPoint.h
+Engine/Application.h Engine/Application.cpp 
+Engine/Log.h Engine/Log.cpp 
+Engine/config.h Engine/Core.h Engine/EntryPoint.h
 )
 
 set_target_properties(
